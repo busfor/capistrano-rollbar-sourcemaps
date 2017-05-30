@@ -2,7 +2,7 @@
 load File.expand_path('../../tasks/sourcemaps.rake', __FILE__)
 
 namespace :deploy do
-  after fetch(:rollbar_sourcemaps_upload_after_task_name), 'rollbar:sourcemaps:upload'
+  after 'assets:precompile', 'rollbar:sourcemaps:upload'
 end
 
 namespace :load do
