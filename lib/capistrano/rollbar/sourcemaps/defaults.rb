@@ -4,6 +4,8 @@ set :rollbar_sourcemaps_minified_url_base, -> { abort 'Please specify the minifi
 # Directory that will be searched for source maps to upload
 set :rollbar_sourcemaps_target_dir, -> { abort 'Please specify the directory from which your javascript sourcemaps will be uploaded'}
 
+set :rollbar_sourcemaps_upload_after_task_name, -> { abort 'Please specify a name of a task after which to upload sourcemaps' }
+
 # Rollbar post_server_item token. Defaults to the rollbar_token used by the rollbar gem
 set :rollbar_sourcemaps_token, -> { fetch :rollbar_token }
 

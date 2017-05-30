@@ -39,6 +39,9 @@ set :rollbar_sourcemaps_minified_url_base, "http://www.example.com"
 
 # Directory that will be searched for source maps to upload
 set :rollbar_sourcemaps_target_dir, "./cache/my_app"
+
+# Name of a task after which to upload sourcemaps
+set :rollbar_sourcemaps_upload_after_task_name, 'assets:precompile'
 ```
 
 ### Optional
